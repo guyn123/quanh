@@ -51,7 +51,7 @@ pipeline {
                 # Tạo website nếu chưa có
                 Import-Module WebAdministration
                 if (-not (Test-Path IIS:\\Sites\\WEBQUAN)) {
-                    New-Website -Name "MySite" -Port 81 -PhysicalPath "c:\\wwwroot\\WEBQUAN"
+                    New-Website -Name "WEBQUAN" -Port 81 -PhysicalPath "c:\\wwwroot\\WEBQUAN"
                 }
                 '''
             }
