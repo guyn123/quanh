@@ -36,6 +36,27 @@ pipeline {
 		}
 	}
       
+  stage ('Publish') {
+		steps {
+			echo 'public 2 runnig folder'
+		//iisreset /stop // stop iis de ghi de file 
+			bat 'xcopy "%WORKSPACE%\\publish" /E /Y /I /R "c:\\wwwroot\\WEBQUAN"'
+ 		}
+	}
+
+  stage('Deploy to IIS') {
+            steps {
+                powershell '''
+               
+                # Tạo website nếu chưa có
+                Import-Module WebAdministration
+                if (-not (Test-Path IIS:\\Sites\\WEBQUAN)) {
+                    New-Website -Name "MySite" -Port 81 -PhysicalPath "c:\\wwwroot\\WEBQUAN"
+                }
+                '''
+            }
+        } // end deploy iis
+
   } // end stages
 }//end pipeline
 
