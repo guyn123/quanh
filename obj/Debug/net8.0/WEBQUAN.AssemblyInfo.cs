@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WEBQUAN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f2e10263c2eb1aba7709043ab272b222fa43bbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87a6553894beb9cf0129851867036309f7f9c147")]
 [assembly: System.Reflection.AssemblyProductAttribute("WEBQUAN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WEBQUAN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
